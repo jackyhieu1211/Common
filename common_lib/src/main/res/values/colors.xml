@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorTextView">#090909</color>
+    <color name="colorTintButton">#090909</color>
+    <color name="colorTintFolder">#FFEB3B</color>
+    <color name="colorBgApp">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="colorPrimary">#FF6200EE</color>
+    <color name="colorDivider">#D6D6D6</color>
+    <color name="colorHighlightAds">#6200EE</color>
+    <color name="colorTitleAds">#3D3D3D</color>
+    <color name="colorTextAds">#727272</color>
+    <color name="colorTextTitleAds">#3d3d3d</color>
+    <color name="colorButtonAds">#2E54FB</color>
+    <color name="colorGray">#16F4F4F4</color>
+    <color name="colorGray2">#DFE2E5</color>
+    <color name="colorGray3">#9E9E9E</color>
+    <color name="colorGray4">#D3D3D3</color>
+    <color name="colorGray5">#3D3D3D</color>
+    <color name="colorGray6">#E3E3E3</color>
+    <color name="colorIconPrimary">#3D3D3D</color>
+</resources>
