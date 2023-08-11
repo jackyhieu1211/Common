@@ -4,6 +4,7 @@
     <color name="colorTintButton">#FFFFFF</color>
     <color name="colorTintFolder">#FFEB3B</color>
     <color name="colorBgApp">#090909</color>
+    <color name="colorBgAppChild">#191919</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="colorPrimary">#FF6200EE</color>
@@ -20,4 +21,7 @@
     <color name="colorGray5">#3D3D3D</color>
     <color name="colorGray6">#E3E3E3</color>
     <color name="colorIconPrimary">#E8E9ED</color>
+    <color name="color_bg_pressed">#63FE554A</color>
+    <color name="colorBaseRed">#FE554A</color>
+    <color name="colorDisable">#6A6D75</color>
 </resources>
