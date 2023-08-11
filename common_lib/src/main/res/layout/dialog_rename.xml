@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/space_20dp"
+        android:background="@drawable/border_compress_dialog"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/space_16dp"
+        android:paddingTop="@dimen/space_27dp"
+        android:paddingEnd="@dimen/space_16dp"
+        android:paddingBottom="@dimen/space_27dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRenameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/text_file_name"
+            android:textColor="@color/colorTextView"
+            android:textSize="@dimen/text_size_16sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtFileName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_box"
+            android:layout_marginTop="@dimen/space_16dp"
+            android:background="@drawable/border_box_dialog"
+            android:hint="@string/text_file_name"
+            android:paddingStart="@dimen/space_16dp"
+            android:paddingEnd="@dimen/space_16dp"
+            android:textColorHint="@color/hintColor"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/errorMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_24dp"
+            android:text="@string/txt_not_empty"
+            android:textColor="@color/colorBaseRed"
+            android:textSize="@dimen/text_size_14sp"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/llButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/space_24dp"
+            android:background="@drawable/selector_button_app">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="invisible" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnRename"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/space_15dp"
+                android:text="@string/tab_rename_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14sp"
+                android:visibility="visible" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

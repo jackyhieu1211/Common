@@ -24,4 +24,11 @@
     <color name="color_bg_pressed">#63FE554A</color>
     <color name="colorBaseRed">#FE554A</color>
     <color name="colorDisable">#6A6D75</color>
+    <color name="colorTextHint">#C1C1C1</color>
+    <color name="hintColor">#AAACAE</color>
+    <color name="colorTabMain">#3D3D3D</color>
+    <color name="colorTextTabMainSelected">@color/colorBaseRed</color>
+    <color name="colorTextTabMainUnSelect">#F8F8F8</color>
+    <color name="colorItemPressed">#4BCFD8FF</color>
+    <color name="colorItemPressed2">#9DABFB</color>
 </resources>

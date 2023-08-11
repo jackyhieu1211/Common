@@ -47,4 +47,32 @@
         <item name="android:background">@drawable/bg_border_bottom_sheet</item>
     </style>
 
+    <style name="TextInputLayoutOutline" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="boxCornerRadiusTopStart">@dimen/space_6dp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/space_6dp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/space_6dp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/space_6dp</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="endIconTint">@color/colorIconPrimary</item>
+        <item name="expandedHintEnabled">false</item>
+        <item name="boxStrokeColor">@color/colorTextHint</item>
+        <item name="strokeWidth">@dimen/space_1dp</item>
+        <item name="hintTextColor">@color/colorTextHint</item>
+        <item name="android:hint">Page</item>
+        <item name="placeholderTextColor">@color/colorTextHint</item>
+    </style>
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/BookMarkCustomTabText</item>
+        <item name="tabSelectedTextColor">@color/colorTextTabMainSelected</item>
+        <item name="tabTextColor">@color/colorTextTabMainUnSelect</item>
+        <item name="tabIndicatorColor">@color/colorTabMain</item>
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabBackground">@color/colorTabMain</item>
+        <item name="elevation">1dp</item>
+        <item name="android:elevation">1dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
 </resources>

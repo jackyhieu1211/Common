@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_delete_file">Delete file</string>
+    <string name="txt_like">Like</string>
+    <string name="txt_dislike">Dislike</string>
+    <string name="text_rate_app_title">Are you satisfied with PDF Fill &amp; Sign?</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="txt_button_apply">Apply</string>
+    <string name="tab_rename_name">Rename</string>
+    <string name="text_file_name">File name</string>
+    <string name="txt_not_empty">Not empty!</string>
+    <string name="set_password">Set Password</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="message_file_corrupted">This file is corrupted</string>
+    <string name="enter_password_continue">Enter password to continue</string>
+    <string name="text_input_pass">OK</string>
+    <string name="wrong_password">Wrong password. Please re-enter</string>
+    <string name="text_feedback">Feedback</string>
+    <string name="error_feedback_empty">Feedback not empty!</string>
+    <string name="text_rate_question">Tell us your feeling of using PDF Fill &amp; Sign?</string>
+
+</resources>

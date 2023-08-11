@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contentBottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/space_16dp"
+    android:background="@drawable/border_bg_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:padding="@dimen/space_12dp"
+        app:srcCompat="@drawable/ic_cancel_12" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_16dp"
+        android:background="@drawable/border_bg_child"
+        android:orientation="vertical"
+        android:padding="@dimen/space_16dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/rate_five_star" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/space_16dp"
+            android:text="@string/text_rate_app_title"
+            android:textColor="@color/colorTextView"
+            android:textSize="@dimen/text_size_18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgSuggest" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnNotReally"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/space_16dp"
+                android:layout_marginTop="@dimen/space_16dp"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_dislike"
+                android:drawablePadding="@dimen/space_8dp"
+                android:gravity="center"
+                android:padding="@dimen/space_16dp"
+                android:text="@string/txt_dislike"
+                android:textColor="@color/colorTextView"
+                android:textSize="@dimen/text_size_14sp"
+                app:layout_constraintEnd_toEndOf="@+id/guideLine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblContent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnGotoRate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/space_16dp"
+                android:layout_marginTop="@dimen/space_16dp"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_like"
+                android:drawablePadding="@dimen/space_8dp"
+                android:gravity="center"
+                android:padding="@dimen/space_16dp"
+                android:text="@string/txt_like"
+                android:textColor="@color/colorTextView"
+                android:textSize="@dimen/text_size_14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideLine"
+                app:layout_constraintTop_toBottomOf="@+id/lblContent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

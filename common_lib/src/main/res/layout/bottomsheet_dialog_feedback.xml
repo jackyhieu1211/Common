@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:background="@color/colorBgAppChild">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_feedback"
+        android:textColor="@color/colorTextView"
+        android:textSize="@dimen/text_size_20sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_24dp"
+        android:text="@string/text_rate_question"
+        android:textColor="@color/colorTextView"
+        android:textSize="@dimen/text_size_14sp" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/txtFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_24dp"
+        android:background="@drawable/bg_content_border_feedback"
+        android:gravity="start"
+        android:hint="Feedback..."
+        android:minLines="6"
+        android:padding="@dimen/space_16dp"
+        android:textColor="@color/colorTextView"
+        android:textColorHint="@color/colorGray4"
+        android:textSize="@dimen/text_size_14sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/selector_button_app"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/space_15dp"
+        android:text="@string/text_feedback"
+        android:textColor="@color/colorTextView"
+        android:textSize="@dimen/text_size_14sp" />
+</androidx.appcompat.widget.LinearLayoutCompat>
