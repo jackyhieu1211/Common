@@ -17,7 +17,6 @@ import com.google.android.gms.ads.nativead.NativeAdOptions
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import vn.app.common_lib.databinding.CmaNativeNormalAdViewBinding
-import vn.app.common_lib.extension.dpToPx
 import vn.app.common_lib.helper.AppPreference
 import vn.app.common_lib.helper.isNetworkConnected
 import kotlin.math.roundToInt
