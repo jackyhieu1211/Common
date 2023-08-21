@@ -57,11 +57,11 @@ dependencies {
     api "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
     kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
 
-    def room_version = "2.5.2"
-    api "androidx.room:room-runtime:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
-    // optional - RxJava3 support for Room
-    api "androidx.room:room-rxjava3:$room_version"
+//    def room_version = "2.5.2"
+//    api "androidx.room:room-runtime:$room_version"
+//    kapt "androidx.room:room-compiler:$room_version"
+//    // optional - RxJava3 support for Room
+//    api "androidx.room:room-rxjava3:$room_version"
 
     /* RxJava3 */
     api "io.reactivex.rxjava3:rxjava:3.1.2"
