@@ -38,7 +38,7 @@ class CMANativeNormaInListAdView @JvmOverloads constructor(
 //        }
     }
 
-    fun loadCMAAd(idAd: String, loaded: ((failed: Boolean) -> Unit)? = null) {
+    fun loadCMAAd(idAd: String, loaded: ((success: Boolean) -> Unit)? = null) {
         this.visibility = VISIBLE
         if (!context.isNetworkConnected() || appPreference.isPremium) {
             this.isGone = true
@@ -53,12 +53,12 @@ class CMANativeNormaInListAdView @JvmOverloads constructor(
             .withAdListener(object : AdListener() {
                 override fun onAdFailedToLoad(adError: LoadAdError) {
                     this@CMANativeNormaInListAdView.isGone = true
-                    loaded?.invoke(true)
+                    loaded?.invoke(false)
                 }
 
                 override fun onAdLoaded() {
                     super.onAdLoaded()
-                    loaded?.invoke(false)
+                    loaded?.invoke(true)
                 }
             })
             .withNativeAdOptions(NativeAdOptions.Builder().build())

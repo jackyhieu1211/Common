@@ -31,7 +31,7 @@ class CMANativeSmallAdView @JvmOverloads constructor(
         CmaNativeSmallAdViewBinding.inflate(LayoutInflater.from(context), this)
 
 
-    fun loadCMAAd(idAd: String, loaded: (() -> Unit)? = null) {
+    fun loadCMAAd(idAd: String, loaded: ((success: Boolean) -> Unit)? = null) {
         Log.e("TAG", "loadCMAAd: --> $idAd")
         this.visibility = VISIBLE
         if (!context.isNetworkConnected() || appPreference.isPremium) {
@@ -45,12 +45,13 @@ class CMANativeSmallAdView @JvmOverloads constructor(
             }
             .withAdListener(object : AdListener() {
                 override fun onAdFailedToLoad(adError: LoadAdError) {
+                    loaded?.invoke(false)
                     this@CMANativeSmallAdView.gone()
                 }
 
                 override fun onAdLoaded() {
                     super.onAdLoaded()
-                    loaded?.invoke()
+                    loaded?.invoke(true)
                 }
             })
             .withNativeAdOptions(NativeAdOptions.Builder().build())

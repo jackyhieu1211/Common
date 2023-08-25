@@ -100,6 +100,7 @@ class CMAInterstitialUtil(
 
             interstitialAd?.show(activity)
         } else {
+            loadAd(adUnitIdNext)
             onShowAdListener.onShowAdFailed()
         }
     }
@@ -109,12 +110,12 @@ class CMAInterstitialUtil(
         adUnitIdNext: String,
         onShowAdCompleteListener: ShowAdListener
     ) {
-        if (appPreference.isPremium) {
+        if (appPreference.isPremium || appPreference.isTimeAdValid().not()) {
             onShowAdCompleteListener.onShowAdComplete()
             return
         }
 
-        if (interstitialAd != null && appPreference.isTimeAdValid()) {
+        if (interstitialAd != null) {
             interstitialAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
                 override fun onAdDismissedFullScreenContent() {
                     // Don't forget to set the ad reference to null so you
@@ -139,6 +140,7 @@ class CMAInterstitialUtil(
             }
             interstitialAd?.show(activity)
         } else {
+            loadAd(adUnitIdNext)
             onShowAdCompleteListener.onShowAdFailed()
         }
     }

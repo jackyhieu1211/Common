@@ -51,7 +51,7 @@ class ApplovinInterstitialUtil(
         }
     }
 
-    fun showAds(onShowAdCompleteListener: OnShowAdCompleteListener) {
+    fun showAds(adId: String, onShowAdCompleteListener: OnShowAdCompleteListener) {
         this.onShowAdCompleteListener = onShowAdCompleteListener
         if (activity.isNetworkConnected().not()) {
             onShowAdCompleteListener.onShowAdComplete()
@@ -61,9 +61,30 @@ class ApplovinInterstitialUtil(
             onShowAdCompleteListener.onShowAdComplete()
             return
         }
-        if (interstitialAd?.isReady == true && appPreference.isTimeAdValid()) {
+        if (interstitialAd?.isReady == true) {
+            if (appPreference.isTimeAdValid()) {
+                interstitialAd?.showAd()
+            }
+        } else {
+            loadAds(adId = adId)
+            onShowAdCompleteListener.onShowAdComplete()
+        }
+    }
+
+    fun forceShowAds(adId: String, onShowAdCompleteListener: OnShowAdCompleteListener) {
+        this.onShowAdCompleteListener = onShowAdCompleteListener
+        if (activity.isNetworkConnected().not()) {
+            onShowAdCompleteListener.onShowAdComplete()
+            return
+        }
+        if (appPreference.isPremium) {
+            onShowAdCompleteListener.onShowAdComplete()
+            return
+        }
+        if (interstitialAd?.isReady == true) {
             interstitialAd?.showAd()
         } else {
+            loadAds(adId = adId)
             onShowAdCompleteListener.onShowAdComplete()
         }
     }

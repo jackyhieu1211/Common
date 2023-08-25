@@ -32,7 +32,7 @@ class CMANativeNormalAdView @JvmOverloads constructor(
         CmaNativeNormalAdViewBinding.inflate(LayoutInflater.from(context), this)
     private var nativeAd: NativeAd? = null
 
-    fun loadCMAAd(idAd: String, loaded: ((Boolean) -> Unit)? = null) {
+    fun loadCMAAd(idAd: String, loaded: ((success : Boolean) -> Unit)? = null) {
         this.visibility = VISIBLE
         if (!context.isNetworkConnected() || appPreference.isPremium) {
             this.gone()
